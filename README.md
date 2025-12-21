@@ -1,0 +1,5 @@
+- intialized react project wth vite + javascrpt
+- added eslint + prettier for code quality
+- configured husky + lint-staged for pre-commit hooks
+- added minimal folder struacture: components , pages assets , store
+- rendered place holder app component
