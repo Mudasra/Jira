@@ -3,3 +3,9 @@
 - configured husky + lint-staged for pre-commit hooks
 - added minimal folder struacture: components , pages assets , store
 - rendered place holder app component
+
+- added tailwind css with postcss config
+- implemented app shell with header and sidebar
+- setup react router with nested routes
+- added placeholderr pages for projects, board, settiings, backlog
+- established scalable layout foundation 
