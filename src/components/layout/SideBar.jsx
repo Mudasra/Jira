@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-const base= 
+const base = 
 "block px-4 py-2 rounded text-sm font-medium hover:bg-gray-200"
 
 const SideBar = () => {

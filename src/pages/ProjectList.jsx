@@ -1,9 +1,32 @@
-import React from 'react'
+import React from "react";  
+import useStore from "../store";
 
-const ProjectList = () => {
+export default function ProjectList() {
+  const projectOrder = useStore((state) => state.projectOrder);
+  const projectsMap = useStore((state) => state.projects);
+  const addProject = useStore((state) => state.addProject);
+
+  const projects = projectOrder.map((id) => projectsMap[id]);
+
   return (
-    <div className='text-xl font-semibold'>Project List</div>
-  )
-}
+    <div>
+      <button
+        onClick={() =>
+          addProject({
+            id: Date.now().toString(),
+            name: "New Project",
+            columns: [],
+          })
+        }
+      >
+        Add Project
+      </button>
 
-export default ProjectList
+      <ul>
+        {projects.map((p) => (
+          <li key={p.id}>{p.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
